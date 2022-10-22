@@ -1,0 +1,13 @@
+@mixin form {
+    padding: 8px;
+    margin-top: 10px;
+    max-width: 196px;
+    background-color: $beige-200;
+    border: 1px solid $brown-300;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:focus {
+        border: 1px solid $blue-500;
+    }
+}

@@ -1,0 +1,26 @@
+.preferences {
+    &__wrapper {
+        padding: 32px 32px 141px;
+        background-color: $beige-100;
+        max-width: 986px;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        padding-bottom: 32px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 32px;
+        color: $black-800;
+        padding-bottom: 4px;
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        line-height: 16px;
+        color: $brown-500;
+    }
+}

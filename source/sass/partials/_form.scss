@@ -1,0 +1,238 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 24px 4px;
+    }
+
+    &__label {
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 196px;
+        color: $brown-500;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            max-width: 320px;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__input {
+        @include form;
+
+        &:hover {
+            background-color: $brown-300;
+            border: 1px solid $brown-200;
+        }
+    }
+
+    &__select {
+        @include form;
+        outline: none;
+
+        &:focus {
+            border: 1px solid $blue-500;
+        }
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            max-width: 196px;
+            min-width: 196px;
+            margin-top: 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__theme {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 8px;
+
+        @media (min-width: 768px) {
+            padding-top: 20px;
+        }
+    }
+
+    &__buttons {
+        padding-top: 32px;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__button {
+        display: block;
+        cursor: pointer;
+        padding: 4px 8px;
+        background: $blue-500;
+        border-radius: 3px;
+        border: 1px solid transparent;
+        color: $beige-100;
+        font-size: 14px;
+        line-height: 24px;
+        min-width: 115px;
+
+        &:hover {
+            box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
+        }
+
+        &:focus {
+            border: 1px solid $blue-100;
+        }
+    }
+}
+
+.form__label:not(:first-child) {
+    padding-top: 20px;
+}
+
+.form__label--arrow {
+    cursor: pointer;
+    position: absolute;
+    content: "";
+    top: 24px;
+    right: 14px;
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid $brown-300;
+    border-right: 3px solid $brown-300;
+    transition: all 0.25s ease;
+    transform: rotate(135deg);
+
+    &:focus {
+        border-top: 3px solid $blue-500;
+        border-right: 3px solid $blue-500;
+    }
+
+    @media (min-width: 768px) {
+        top: 14px;
+        right: 14px;
+    }
+}
+
+.active {
+    transform: rotate(315deg);
+    border-top: 3px solid $blue-500;
+    border-right: 3px solid $blue-500;
+}
+
+.form__select--active {
+    background: $beige-200;
+}
+
+.form__label--flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.form__label--padding {
+    padding-bottom: 10px;
+    padding-top: 20px;
+
+    @media (min-width: 768px) {
+        margin-top: -20px;
+        padding-top: 0;
+    }
+}
+
+.form__theme label {
+    cursor: pointer;
+}
+
+.form__input--code {
+    min-width: 49px;
+    max-width: 49px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.form__input--radio {
+    display: flex;
+    align-items: baseline;
+}
+
+.form__button--submit {
+    background: $blue-500;
+    color: $beige-100;
+}
+
+.form__button--reset {
+    background: transparent;
+    color: $blue-500;
+    max-width: 60px;
+    min-width: 60px;
+
+    &:hover {
+        background: $beige-100;
+        color: $blue-700;
+        box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+        border: 1px solid $blue-500;
+    }
+}
+
+.form__label--placeholder {
+    position: relative;
+}
+
+.code-placeholder {
+    position: absolute;
+    font-size: 11px;
+    line-height: 13px;
+    color: $brown-300;
+    bottom: -65px;
+    left: 0;
+    min-width: 120px;
+
+    @media (min-width: 768px) {
+        left: 126px;
+        bottom: -14px;
+    }
+}
+
+.select--hidden {
+    display: none;
+}
+
+
+input[type="radio"] {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    appearance: none;
+    outline: none;
+}
+
+input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    top: 8px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid $blue-500;
+}
+
+input[type="radio"]:checked::before {
+    top: 8px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: $blue-500;
+    box-shadow: inset 0 0 0 2px $beige-100;
+}

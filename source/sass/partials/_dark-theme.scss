@@ -1,0 +1,96 @@
+.dark .preferences__wrapper {
+    background-color: $black-100;
+    padding: 32px 32px 141px;
+    max-width: 986px;
+    margin: 0 auto;
+}
+
+.dark .preferences__title {
+    color: $beige-800;
+}
+
+.dark .preferences__subtitle {
+    color: $beige-200;
+}
+
+.dark .form__label {
+    color: $beige-200;
+}
+
+.dark .form__select,
+.dark .form__input {
+    color: $beige-800;
+    background-color: $brown-500;
+    border: 1px solid $brown-300;
+
+    &:hover {
+        box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.2);
+    }
+
+    &:focus {
+        border: 1px solid $blue-400;
+    }
+}
+
+.dark .form__input:focus {
+    border: 1px solid $blue-400;
+}
+
+.dark .form__button--submit {
+    background-color: $blue-400;
+    color: $black-100;
+
+    &:hover {
+        box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.2);
+    }
+
+    &:focus {
+        border: 1px solid $beige-300;
+    }
+}
+
+.dark .form__button--reset {
+    background-color: $brown-600;
+    color: $blue-100;
+
+    &:hover {
+        box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.2);
+    }
+
+    &:focus {
+        border: 1px solid $blue-400;
+    }
+}
+
+.dark .select__list {
+    background-color: $brown-600;
+}
+
+.dark .select__item:focus {
+    background-color: $brown-500;
+}
+
+.dark .form__input--radio {
+    color: $beige-800;
+}
+
+.dark input[type="radio"]::before {
+    border: 2px solid $beige-200;
+}
+
+.dark input[type="radio"]:checked::before {
+    background-color: $blue-400;
+    box-shadow: inset 0 0 0 2px $black-100;
+}
+
+.dark .footer__wrapper {
+    background-color: $black-100;
+}
+
+.dark .footer__text-content {
+    color: $beige-200;
+}
+
+.dark .footer__link {
+    color: $blue-100;
+}

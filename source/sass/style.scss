@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "variables";
+@import "normalize";
+@import "mixins";
+@import "partials/preferences";
+@import "partials/form";
+@import "partials/select";
+@import "partials/dark-theme";
+@import "partials/footer";
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page {
+    background-color: $grey-700;
+}
+
+.dark {
+    background-color: $black-700;
+}
+
+
+.container {
+    min-width: 320px;
+    min-height: auto;
+
+    @media (min-width: 768px) {
+        min-width: 100%;
+    }
+
+    @media (min-width: 1200px) {
+        margin: 0 auto;
+        min-width: 100%;
+    }
+}
+
+// .hidden {
+//     display: none;
+// }
