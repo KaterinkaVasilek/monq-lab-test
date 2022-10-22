@@ -1,0 +1,1 @@
+const inputCode=document.querySelectorAll(".form__input--code");function checkCode(){inputCode.forEach((e=>{e.addEventListener("keyup",(function(){this.value=this.value.replace(/[^\d]/g,"")}))}))}checkCode();
