@@ -1,12 +1,12 @@
 const formKey = "formFields";
 const reset = document.querySelector(".form__button--reset");
 
-import { checked } from "./change-theme.js";
+import { handleSumbit } from "./change-theme.js";
 import { form } from "./show-select.js";
 
 window.addEventListener("DOMContentLoaded", () => {
     loadFormControls();
-    checked();
+    handleSumbit();
 });
 
 const saveInStorage = (key, data) => {

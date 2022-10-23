@@ -3,10 +3,10 @@ const page = document.body;
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    checked();
+    handleSumbit();
 });
 
-function changeLightTheme() {
+function setLightTheme() {
     page.classList.remove("light");
     page.classList.add("dark");
 }
@@ -16,15 +16,14 @@ function changeDarkTheme() {
     page.classList.add("light");
 }
 
-function checked() {
-    const isChecked = document.querySelector('input[type="radio"]:checked');
+function handleSumbit() {
+    const currentTheme = document.querySelector('input[type="radio"]:checked');
 
-    // console.log(isChecked);
-    if(isChecked.value === "dark") {
-        changeLightTheme();
+    if(currentTheme.value === "dark") {
+        setLightTheme();
     } else {
         changeDarkTheme();
     }
 };
 
-export { checked };
+export { handleSumbit };

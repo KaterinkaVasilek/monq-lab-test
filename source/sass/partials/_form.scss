@@ -93,6 +93,10 @@
 
 .form__label:not(:first-child) {
     padding-top: 20px;
+
+    @media (min-width: 768px) {
+        padding-top: 0;
+    }
 }
 
 .form__label--arrow {

@@ -56,11 +56,6 @@
                             <span class="form__label--arrow"></span>
                             <input type="text" name="select-current-homepage" id="select-current-homepage" class="select__current form__select" value="Starred Projects" readonly>
                         </div>
-                        <!-- <ul class="select__list select__list--hidden">
-                            <li class="select__item">Starred Projects
-                                <input class="select__option" type="text" name="starred-projects" id="starred-projects" value="Starred Projects" readonly>
-                            </li>
-                        </ul> -->
                         <ul class="select__list select__list--hidden">
                             <li class="select__item">Starred Projects</li>
                         </ul>
@@ -83,11 +78,11 @@
                     </label>
                     <div class="form__theme" id="theme">
                         <label class="form__input--radio">
-                            <input type="radio" name="theme" onchange="() => checked()" id="light-theme" class="light-theme" value="light" checked>
+                            <input type="radio" name="theme" onchange="() => handleSumbit()" id="light-theme" class="light-theme" value="light" checked>
                             Light
                         </label>
                         <label class="form__input--radio">
-                            <input type="radio" name="theme" onchange="() => checked()" id="dark-theme" class="dark-theme" value="dark">
+                            <input type="radio" name="theme" onchange="() => handleSumbit()" id="dark-theme" class="dark-theme" value="dark">
                             Dark
                         </label>
                     </div>
